@@ -14,7 +14,7 @@ const ChatClient = () => {
   // WebSocket connection setup and handling
   useEffect(() => {
     const connectWebSocket = () => {
-      const wsConnection = new WebSocket('wss://a7e6-117-192-72-120.ngrok-free.app');
+      const wsConnection = new WebSocket('wss://socioview-production.up.railway.app/');
 
       wsConnection.onopen = () => {
         console.log('WebSocket connection established');
@@ -64,7 +64,7 @@ const ChatClient = () => {
       setError(null);
       setMessages((prev) => [...prev, { text: inputMessage, type: 'user' }]);
 
-      const response = await fetch('https://a7e6-117-192-72-120.ngrok-free.app/chat', {
+      const response = await fetch('https://socioview-production.up.railway.app//chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ input_value: inputMessage, requestId })
