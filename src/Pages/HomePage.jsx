@@ -79,14 +79,6 @@ function HomePage() {
         >
           Start gaining insights and growing your presence.
         </motion.p>
-        <motion.a
-          href="#"
-          className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Get Started
-        </motion.a>
       </section>
     </div>
   );
