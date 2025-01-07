@@ -80,24 +80,24 @@ const ChatClient = () => {
   }, [inputMessage, requestId, isLoading]);
 
   return (
-    <div className={`${isDark ? 'dark' : ''} min-h-screen flex flex-col bg-gray-100 dark:bg-gray-900`}>
-      {/* Header */}
-      <div className="w-full bg-gray-800 dark:bg-gray-700 text-white px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <MessageCircle className="w-6 h-6" />
-          <h1 className="text-xl font-semibold">Chat</h1>
+    <div className={`${isDark ? 'dark' : ''} min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 z-10`}>
+      {/* Chat Container */}
+      <div className="flex flex-col w-full max-w-3xl h-[90vh] bg-white dark:bg-gray-800 shadow-lg rounded-lg">
+        {/* Header */}
+        <div className="w-full bg-gray-800 dark:bg-gray-700 text-white px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <MessageCircle className="w-6 h-6" />
+            <h1 className="text-xl font-semibold">Chat</h1>
+          </div>
+          <button
+            onClick={() => setIsDark(!isDark)}
+            className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition-colors">
+            {isDark ? <Sun className="w-6 h-6" /> : <Moon className="w-6 h-6" />}
+          </button>
         </div>
-        <button
-          onClick={() => setIsDark(!isDark)}
-          className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition-colors">
-          {isDark ? <Sun className="w-6 h-6" /> : <Moon className="w-6 h-6" />}
-        </button>
-      </div>
 
-      {/* Chat Content */}
-      <div className="flex-grow flex flex-col p-6 max-w-4xl mx-auto w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg">
-        {/* Messages */}
-        <div className="flex-grow overflow-y-auto mb-4 space-y-4">
+        {/* Chat Content */}
+        <div className="flex-grow overflow-y-auto p-6 space-y-4">
           {messages.map((message, index) => (
             <div
               key={index}
@@ -119,13 +119,13 @@ const ChatClient = () => {
 
         {/* Error Message */}
         {error && (
-          <div className="mb-4 p-3 bg-red-500 text-white rounded-lg">
+          <div className="p-3 bg-red-500 text-white rounded-lg mx-6">
             {error}
           </div>
         )}
 
         {/* Input Box */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 p-6">
           <input
             type="text"
             value={inputMessage}
