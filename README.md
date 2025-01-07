@@ -95,5 +95,3 @@ To deploy your own version:
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ---
-
-Would you like to add anything else?
