@@ -76,7 +76,7 @@ app.post('/chat', async (req, res) => {
             {
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer AstraCS:jOBaSjWoaMtEcJOruEFgNpTG:b7cfb2bc58541e373eaa8b09e3008d07a7943538c866b589128939f6c7687012`
+                    'Authorization': `Bearer AstraCS:wCAqAxxEuOLgoPsjjyxLZSzP:18646083e1cb901f89ffdd024f6aeb067b1fadd4311cc25e6a5c55ef38a45ee8`
                 }
             }
         );
