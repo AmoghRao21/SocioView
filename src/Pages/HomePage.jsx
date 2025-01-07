@@ -53,7 +53,7 @@ function HomePage() {
 
       {/* CTA Section */}
       <section
-        className="w-full flex bg-gray-900 flex-col justify-center items-center max-w-7xl mx-auto py-6 px-4 lg:px-8"
+        className="w-full flex  bg-gradient-to-b from-gray-800 via-gray-900 to-black flex-col justify-center items-center max-w-7xl mx-auto py-6 px-4 lg:px-8"
         style={{
           backgroundImage: "url('https://source.unsplash.com/1920x1080/?technology,gradient')",
           backgroundSize: "cover",
