@@ -3,28 +3,28 @@ const TeamPage = () => {
     {
       name: "Amogha Rao",
       role: "Lead Developer",
-      image: './src/components/img/mem1.jpg',
+      image: 'https://i.postimg.cc/crVhtvZL/mem1.jpg',
       description:
         "Amogha is an experienced developer specializing in full-stack development, passionate about building scalable web applications.",
     },
     {
       name: "Ashdeep Singh",
       role: "GenAI, LLM Developer",
-      image: "./src/components/img/mem2.jpg",
+      image: "https://i.postimg.cc/gwpK41x9/mem2.jpg",
       description:
         "Ashdeep specialises in LLM and GenAI Development, brings his creativity into life.",
     },
     {
       name: "Varun Chaitanya Sharma",
       role: "UI/UX Designer",
-      image: "./src/components/img/mem3.jpg",
+      image: "https://i.postimg.cc/FY3Zyhsg/mem3.jpg",
       description:
         "Varun is a seasoned and creative UI/UX Developer who gives life to unique and amazing art.",
     },
     {
       name: "Tejas Wasan",
       role: "Project Strategies",
-      image: "./src/components/img/mem4.jpg",
+      image: "https://i.postimg.cc/mcSynV9P/mem4.jpg",
       description:
         "Tejas is a well-desciplined project strategist who can bring USP that is unmatchable.",
     },
