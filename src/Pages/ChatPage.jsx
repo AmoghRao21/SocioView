@@ -80,64 +80,65 @@ const ChatClient = () => {
   }, [inputMessage, requestId, isLoading]);
 
   return (
-    <div className={`${isDark ? 'dark' : ''} min-h-screen flex flex-col z-10 bg-background`}>
-      <div className="flex-grow flex flex-col justify-between p-4 max-w-screen-sm mx-auto bg-card rounded-lg shadow-lg z-10">
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center gap-2 p-2">
-            <MessageCircle className="text-primary w-5 h-5" />
-            <h1 className="text-lg font-semibold text-primary">Chat</h1>
-          </div>
-          <button
-            onClick={() => setIsDark(!isDark)}
-            className="p-2 rounded-full hover:bg-secondary transition-colors">
-            {isDark ? (
-              <Sun className="w-5 h-5 text-primary" />
-            ) : (
-              <Moon className="w-5 h-5 text-primary" />
-            )}
-          </button>
+    <div className={`${isDark ? 'dark' : ''} min-h-screen flex flex-col bg-gray-100 dark:bg-gray-900`}>
+      {/* Header */}
+      <div className="w-full bg-gray-800 dark:bg-gray-700 text-white px-6 py-4 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <MessageCircle className="w-6 h-6" />
+          <h1 className="text-xl font-semibold">Chat</h1>
         </div>
+        <button
+          onClick={() => setIsDark(!isDark)}
+          className="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition-colors">
+          {isDark ? <Sun className="w-6 h-6" /> : <Moon className="w-6 h-6" />}
+        </button>
+      </div>
 
-        <div className="flex-grow overflow-y-auto mb-4 p-4 rounded-lg bg-background z-10 max-h-[calc(100vh-150px)] w-screen">
+      {/* Chat Content */}
+      <div className="flex-grow flex flex-col p-6 max-w-4xl mx-auto w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg">
+        {/* Messages */}
+        <div className="flex-grow overflow-y-auto mb-4 space-y-4">
           {messages.map((message, index) => (
             <div
               key={index}
-              className={`mb-4 p-3 rounded-lg max-w-screen-lg ${
+              className={`p-4 max-w-[75%] rounded-lg ${
                 message.type === 'user'
-                  ? 'ml-auto bg-primary text-primary-foreground w-screen'
-                  : 'mr-auto bg-secondary text-secondary-foreground w-screen'
-              } break-words whitespace-normal`}>
+                  ? 'ml-auto bg-blue-500 text-white'
+                  : 'mr-auto bg-gray-200 dark:bg-gray-700 text-black dark:text-white'
+              }`}>
               <ReactMarkdown>{message.text}</ReactMarkdown>
             </div>
           ))}
           {isLoading && (
-            <div className="flex items-center gap-2 text-muted-foreground z-10 w-screen">
+            <div className="flex items-center gap-2 text-gray-500">
               <Loader2 className="animate-spin w-4 h-4" />
               <span className="text-sm">Processing...</span>
             </div>
           )}
         </div>
 
+        {/* Error Message */}
         {error && (
-          <div className="mb-4 p-3 bg-destructive/10 text-destructive rounded-lg text-sm z-10">
+          <div className="mb-4 p-3 bg-red-500 text-white rounded-lg">
             {error}
           </div>
         )}
 
-        <div className="flex gap-2 z-10">
+        {/* Input Box */}
+        <div className="flex items-center gap-4">
           <input
             type="text"
             value={inputMessage}
             onChange={(e) => setInputMessage(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
             placeholder="Type your message..."
-            className="flex-1 p-3 bg-background text-primary text-black rounded-lg border border-input focus:outline-none focus:ring-2 focus:ring-ring transition-colors"
+            className="flex-1 p-3 rounded-lg bg-gray-100 dark:bg-gray-700 text-black dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
             disabled={isLoading}
           />
           <button
             onClick={sendMessage}
             disabled={isLoading || !inputMessage.trim()}
-            className="p-3 bg-primary text-primary-foreground rounded-lg hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
+            className="p-3 rounded-lg bg-blue-500 text-white hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition">
             <Send className="w-5 h-5" />
           </button>
         </div>
