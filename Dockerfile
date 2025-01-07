@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Step 4: Install the app dependencies
-RUN npm ci
+RUN npm install
 
 # Step 5: Copy the rest of your application files into the container
 COPY . .
