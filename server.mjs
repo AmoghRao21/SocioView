@@ -56,7 +56,7 @@ app.post('/chat', async (req, res) => {
     try {
         // Sending the request to the external API
         const response = await axios.post(
-            'https://api.langflow.astra.datastax.com/lf/f26ad8b1-b0ce-44f4-8810-cae6a787cbbf/api/v1/run/3ce57e23-5cdb-43cb-a8e4-e90b5b23315b?stream=false',
+            'https://api.langflow.astra.datastax.com/lf/f26ad8b1-b0ce-44f4-8810-cae6a787cbbf/api/v1/run/4580c05e-a327-4e27-b733-5ccbcfa2eb22?stream=false',
             {
                 input_value,
                 output_type: 'chat',
@@ -76,7 +76,7 @@ app.post('/chat', async (req, res) => {
             {
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer AstraCS:wCAqAxxEuOLgoPsjjyxLZSzP:18646083e1cb901f89ffdd024f6aeb067b1fadd4311cc25e6a5c55ef38a45ee8`
+                    'Authorization': `Bearer AstraCS:mcHhJHJOFFfeXEaAmMTXCRcC:9618af21b849fd22f5ebf570716fa0387b3ff7b37f7659783189f738d52d8071`
                 }
             }
         );
