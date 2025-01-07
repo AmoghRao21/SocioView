@@ -7,6 +7,13 @@ function HomePage() {
     <div className="min-h-screen bg-gradient-to-b from-gray-800 via-gray-900 to-black text-white flex flex-col items-center w-full">
       {/* Header Section */}
       <header className="w-full text-center py-10 px-4">
+          <div className="flex items-center">
+               <img
+                src="./socioview_logo_purple.svg"
+                alt="Logo"
+                className="h-10 w-auto" // Adjust height and width as needed
+               />
+         </div>
         <motion.h1
           className="text-4xl md:text-5xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
           initial={{ opacity: 0, y: -20 }}
