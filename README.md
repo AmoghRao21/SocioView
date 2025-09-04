@@ -1,14 +1,11 @@
 
 
-Thank you for clarifying! Here's the updated README to reflect that:
-
----
 
 # Socio View
 
 ## Overview
 
-[Socio View](https://socio-view.vercel.app) is a cutting-edge **social media analytics tool** designed to help users gain actionable insights into their social media performance. With an integrated **AI chatbot**, Socio View provides instant recommendations and analysis, making it an essential tool for content creators, marketers, and businesses.
+[Socio View](https://socio-view.vercel.app) is a cutting-edge **social media analytics tool** designed to help users gain actionable insights into their social media performance. With an integrated **AI chatbot**, Socio View provides instant recommendations and analysis, making it an essential tool for content creators, marketers, and businesses. (This project was built for FindCoder X AWS hackathon, Mumbai)
 
 ## Features
 
